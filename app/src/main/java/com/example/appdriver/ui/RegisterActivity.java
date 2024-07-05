@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         edt_rePass = findViewById(R.id.edt_rePass);
         btnRegis = findViewById(R.id.btnregis);
 
-    // Hahuahu
+
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
