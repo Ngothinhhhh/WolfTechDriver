@@ -28,30 +28,23 @@
         android:orientation="vertical">
 
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
+            android:drawableLeft="@drawable/username"
             android:hint="Email"
-            android:drawableLeft="@drawable/username"
-            android:inputType="text"/>
+            android:inputType="text" />
 
         <EditText
-            android:layout_marginTop="10sp"
+            android:id="@+id/edtPass"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@drawable/rounded_edittext"
-            android:hint="Tên đăng nhập"
-            android:drawableLeft="@drawable/username"
-            android:inputType="text"/>
-
-        <EditText
             android:layout_marginTop="10sp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Mật khẩu"
             android:drawableLeft="@drawable/password"
-            android:inputType="textPassword"/>
+            android:hint="Mật khẩu"
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnLogin"
