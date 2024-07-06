@@ -8,12 +8,11 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     >
 
-    <TextView
+    <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tài xế"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:textSize="32sp"/>
+        android:queryHint="Search..."
+        app:iconifiedByDefault="false"/>
 
 </androidx.appcompat.widget.Toolbar>

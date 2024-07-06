@@ -9,15 +9,46 @@
     android:orientation="vertical"
     tools:context=".ui.LoginActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đăng ký"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_marginTop="24sp"
-        android:gravity="center"/>
+        android:orientation="horizontal"
+        android:padding="18dp">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24sp"
+                android:text="Đăng ký tài xế mới"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24sp"
+                android:text="Vui lòng cho chúng tôi biết thêm về bạn"
+                android:textColor="#C1C1C1"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sign_up_image" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,74 +61,84 @@
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_text"
             android:drawableLeft="@drawable/username"
             android:hint="Họ và tên"
-            android:inputType="text" />
+            android:inputType="text"
+            android:padding="18dp" />
 
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_text"
             android:drawableLeft="@drawable/username"
             android:hint="Email"
-            android:inputType="text" />
+            android:inputType="text"
+            android:padding="18dp" />
 
         <EditText
             android:id="@+id/edt_phone"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_text"
             android:drawableLeft="@drawable/username"
             android:hint="Số điện thoại"
-            android:inputType="text" />
+            android:inputType="text"
+            android:padding="18dp" />
 
         <EditText
             android:id="@+id/edt_pass"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_text"
             android:drawableLeft="@drawable/password"
             android:hint="Mật khẩu"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="18dp" />
 
         <EditText
             android:id="@+id/edt_rePass"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_text"
             android:drawableLeft="@drawable/password"
             android:hint="Xác nhận mật khẩu"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="18dp" />
 
         <Button
             android:id="@+id/btnregis"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20sp"
+            android:layout_margin="15sp"
+            android:backgroundTint="@color/white"
             android:text="Đăng ký"
-            android:textSize="24sp"
             android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
+            android:textSize="24sp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/tvRegis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="219dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="Đã có tài khoản?"
-                android:textColor="@color/white"
+                android:textColor="#C1C1C1"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,8 +149,9 @@
 
             <Button
                 android:id="@+id/btnLoginInRegis"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
                 android:text="Đăng nhập"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -118,7 +160,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
 
     </LinearLayout>

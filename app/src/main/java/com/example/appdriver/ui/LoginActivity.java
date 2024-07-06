@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     EditText edtPass, edtEmail ;
-    Button btnLogin;
+    Button btnLogin , btnRegisInLogin;
     FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         edtEmail = findViewById(R.id.edtEmail);
         edtPass = findViewById(R.id.edtPass);
+        btnRegisInLogin = findViewById(R.id.btnRegisInLogin);
         auth = FirebaseAuth.getInstance();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +69,14 @@ public class LoginActivity extends AppCompatActivity {
                     });
                 }
 
+            }
+        });
+        btnRegisInLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIt = new Intent(LoginActivity.this , RegisterActivity.class);
+                startActivity(myIt);
+                finish();
             }
         });
     }

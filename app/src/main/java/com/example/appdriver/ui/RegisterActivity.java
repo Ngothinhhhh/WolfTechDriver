@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class RegisterActivity extends AppCompatActivity {
     EditText edtName, edtEmail , edt_phone, edt_pass, edt_rePass;
 
-    Button btnRegis;
+    Button btnRegis , btnLoginInRegis;
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
         edt_pass = findViewById(R.id.edt_pass);
         edt_rePass = findViewById(R.id.edt_rePass);
         btnRegis = findViewById(R.id.btnregis);
+        btnLoginInRegis = findViewById(R.id.btnLoginInRegis);
 
 
         btnRegis.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +77,15 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
 
+            }
+        });
+
+        btnLoginInRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIt = new Intent(RegisterActivity.this , LoginActivity.class);
+                startActivity(myIt);
+                finish();
             }
         });
     }
